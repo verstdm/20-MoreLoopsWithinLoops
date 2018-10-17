@@ -251,9 +251,9 @@ def numbers_constant_forward(r, maxnum, n):
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
     s = ''
-    for i in range(1, maxnum + 1):
+    for i in range(maxnum):
         for k in range(n):
-            s = s + str(i)
+            s = s + str(i + 1)
         s = s + ' '
     for i in range(r):
         print(s)
@@ -300,9 +300,9 @@ def numbers_constant_backwards(r, maxnum, n):
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
     s = ''
-    for i in range(maxnum, 0, -1):
+    for i in range(maxnum):
         for k in range(n):
-            s = s + str(i)
+            s = s + str(maxnum - i)
         s = s + ' '
     for i in range(r):
         print(s)
@@ -359,9 +359,9 @@ def numbers_increasing_forward(r, maxnum):
     #   defeat the goal of providing practice at loops within loops.
     # ------------------------------------------------------------------
     s = ''
-    for i in range(1, maxnum + 1):
-        for k in range(i):
-            s = s + str(i)
+    for i in range(maxnum):
+        for k in range(i + 1):
+            s = s + str(i + 1)
         s = s + ' '
     for i in range(r):
         print(s)
